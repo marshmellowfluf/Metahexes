@@ -5,9 +5,9 @@ plugins {
 archivesBaseName = getArtifactID("fabric")
 
 loom {
-    mixin.defaultRefmapName = "yourmod.mixins.refmap.json"
+    mixin.defaultRefmapName = "metahexes.mixins.refmap.json"
 
-    accessWidenerPath = file("src/main/resources/yourmod.accesswidener")
+    accessWidenerPath = file("src/main/resources/metahexes.accesswidener")
 
     runs {
         client {
@@ -39,6 +39,9 @@ repositories {
         url 'https://ladysnake.jfrog.io/artifactory/mods'
     }
     maven {
+        url 'https://maven.blamejared.com/'
+    }
+    maven {
         name "entity reach"
         url "https://maven.jamieswhiteshirt.com/libs-release/"
     }
@@ -47,6 +50,7 @@ repositories {
         name = "TerraformersMC"
         url = "https://maven.terraformersmc.com/"
     }
+
 }
 
 dependencies {
@@ -58,6 +62,10 @@ dependencies {
 
     // Links in the Common project buildspace.
     compileOnly project(":Common")
+
+    modImplementation "at.petra-k.paucal:paucal-fabric-$minecraftVersion:$paucalVersion"
+    modImplementation "at.petra-k.hexcasting:hexcasting-fabric-$minecraftVersion:$hexcastingVersion"
+    modImplementation "vazkii.patchouli:Patchouli:$minecraftVersion-$patchouliVersion-FABRIC"
 
     modImplementation "me.zeroeightsix:fiber:$fiberVersion"
     include "me.zeroeightsix:fiber:$fiberVersion"

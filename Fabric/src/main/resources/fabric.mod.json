@@ -1,13 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "yourmod",
+  "id": "metahexes",
   "version": "${version}",
 
-  "name": "Your Mod",
-  "description": "A blank mod template",
+  "name": "Marshie's Metahexes",
+  "description": "An add-on for Hex Casting",
   "authors": [
-    "petrak@ (aka gamma-delta)",
-    "grywo (just turning her work into a template)"
+	"MarshmellowFluf"
   ],
   "contact": {
     "homepage": "",
@@ -20,27 +19,28 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      {"adapter": "kotlin", "value": "yourmod.name.here.fabric.FabricInitializer"}
+      {"adapter": "kotlin", "value": "ram.marshmellowfluf.metahexes.fabric.FabricInitializer"}
     ],
     "client": [
-      {"adapter": "kotlin", "value": "yourmod.name.here.fabric.FabricClientInitializer"}
+      {"adapter": "kotlin", "value": "ram.marshmellowfluf.metahexes.fabric.FabricClientInitializer"}
     ],
     "fabric-datagen": [
-      "yourmod.name.here.datagen.FabricDataGenerators"
+      "ram.marshmellowfluf.metahexes.datagen.FabricDataGenerators"
     ]
   },
   "mixins": [
-    "yourmod.plat.mixins.json",
-    "yourmod.mixins.json"
+    "metahexes.plat.mixins.json",
+    "metahexes.mixins.json"
   ],
-  "accessWidener": "yourmod.accesswidener",
+  "accessWidener": "metahexes.accesswidener",
 
   "depends": {
     "fabricloader": ">=0.13",
     "fabric": ">=0.50",
     "minecraft": "=1.18.2",
     "java": ">=17",
-    "fabric-language-kotlin": ">=1.7.4+kotlin.1.6.21"
+    "fabric-language-kotlin": ">=1.7.4+kotlin.1.6.21",
+	"hexcasting": ">=0.9.6-pre-5"
   },
   "suggests": {
   },

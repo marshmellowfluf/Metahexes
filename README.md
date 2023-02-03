@@ -8,12 +8,12 @@ The approach here does not actually avoid the various complexities of cross-modl
 
 There will be some follow-up work to turn it from a generic "Hello World" mod into _your_ Generic "Hello World" mod.  Some keywords to look at:
 
- ``yourmod.name.here`` is the default package name.  While valid for test purposes, you _will_ need to change this before release (and ideally immediately after forking) or risk (near-certain) collisions and annoying bugs, and it's easier the earlier you change it.
+ ``net.marshmellowfluf.metahexes`` is the default package name.  While valid for test purposes, you _will_ need to change this before release (and ideally immediately after forking) or risk (near-certain) collisions and annoying bugs, and it's easier the earlier you change it.
  IntelliJ (and most other IDEAs) will allow bulk refactoring, though expect to need to change a few ``package`` settings at the top of files.
 
 See [this page](https://docs.oracle.com/javase/specs/jls/se6/html/packages.html#7.7) for information about package naming rules, particularly _don't use a popular TLD that you don't actually own or control_.
 
- ``yourmod`` is the default modID.  _AFTER_ you've refactored your package name, this is the next thing to change.  It's only referenced in a few places, but other mods, compile-time behavior (both Forge and Fabric) and maven will interact with it heavily.
+ ``net`` is the default modID.  _AFTER_ you've refactored your package name, this is the next thing to change.  It's only referenced in a few places, but other mods, compile-time behavior (both Forge and Fabric) and maven will interact with it heavily.
 
 See [this page](https://maven.apache.org/guides/mini/guide-naming-conventions.html) for some naming conventions specific to this ID.
 

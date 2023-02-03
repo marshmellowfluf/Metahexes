@@ -5,23 +5,23 @@ license = "MIT"
 issueTrackerURL = "https://github.com//issues"
 
 [[mods]]
-modId = "yourmod"
+modId = "net"
 version = "${file.jarVersion}"
-displayName = "Your Mod"
+displayName = "Marshie's Metahexes"
 displayURL = "https://github.com/"
 logoFile = "logo.png"
-credits = "Petrak@ for the Project Layout"
-authors = "petrak@ (aka gamma-delta), grywo for turning it into a template"
-description = "An empty project."
+credits = "Petrak@ for the Project Layout, grywo for turning it into a template"
+authors = "MarshmellowFluf"
+description = "An add-on for Hex Casting."
 
-[[dependencies.yourmod]]
+[[dependencies.net]]
 modId = "forge"
 mandatory = true
 versionRange = "[40,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.yourmod]]
+[[dependencies.net]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.18.2,1.19)"
